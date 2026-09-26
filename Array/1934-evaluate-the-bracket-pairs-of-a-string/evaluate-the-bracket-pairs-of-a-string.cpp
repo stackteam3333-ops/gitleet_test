@@ -8,7 +8,7 @@ public:
         string res;
         for (int i = 0; i < s.size(); ++i) {
             if (s[i] == '(') {
-                int j = s.find(")", i + 2);
+                int j = s.find(")", i + 1);
                 auto t = s.substr(i + 1, j - i - 1);
                 res += d.count(t) ? d[t] : "?";
                 i = j;
